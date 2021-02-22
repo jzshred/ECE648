@@ -1,4 +1,4 @@
-# Bayesian Classifier
+# Bayesian Classifier with discrete attributes
 
 # Import dependencies.
 from sklearn import preprocessing

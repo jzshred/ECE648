@@ -1,3 +1,5 @@
+# Removal of Tomek Links from a training set
+
 # Import required libraries.
 from sklearn import preprocessing
 from imblearn.under_sampling import TomekLinks

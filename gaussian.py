@@ -1,4 +1,4 @@
-# Sets of Gaussians
+# Bayesian Classifier with continuous attributes
 
 # Import dependencies.
 from sklearn import preprocessing
