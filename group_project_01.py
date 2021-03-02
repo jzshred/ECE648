@@ -43,13 +43,6 @@ def norm_and_split(dataset,labels):
 	train_test_split(norm_dataset, labels, test_size = 0.3, random_state = 24)
 	return (training_set, testing_set, training_class, testing_class)
 
-# Function to adjust boolean values.
-def adjust_boolean(training_set, testing_set, boolean_columns):
-	for column in boolean_columns:
-		training_set[column] = 0.5 * training_set[column]
-		testing_set[column] = 0.5 * testing_set[column]
-	return (training_set, testing_set)
-
 # Function to create a noisy training set.
 def noiser(training_set, training_class, iterations, intensity):
 	# Copy training set and training class.
@@ -96,11 +89,6 @@ dataset, labels = get_data('tae.data','native instructor course summer size eval
 
 # Normalize and split the data.
 training_set, testing_set, training_class, testing_class = norm_and_split(dataset,labels)
-
-# Adjust boolean attributes to 0.5.
-# TODO: when changing the data set, column names must be modified.
-boolean_columns = 'native summer'.split()
-training_set, testing_set = adjust_boolean(training_set, testing_set, boolean_columns)
 
 # Train without noise.
 print('Accuracy rates - without added examples')
